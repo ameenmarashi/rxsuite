@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>System Rx | The Rx Software Family</title>
+    <meta
+      name="description"
+      content="System Rx is the diagnostic hub for the Rx software family. Explore System Rx, Cleaner Rx, Cyber Rx, and Connectivty Rx for iPhone, iPad, and Mac."
+    />
+    <meta property="og:title" content="System Rx | The Rx Software Family" />
+    <meta
+      property="og:description"
+      content="A polished System Rx landing page with direct App Store downloads for the full Rx software family."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/fd/51/d0/fd51d0ac-165b-0a90-1bd0-136fd4fa13a6/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">Rx</span>
+          <div>
+            <p class="eyebrow">Rx Software Family</p>
+            <h1>System Rx</h1>
+          </div>
+        </div>
+        <nav class="topnav" aria-label="Primary">
+          <a href="#overview">Overview</a>
+          <a href="#family">Apps</a>
+          <a href="#download">Download</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero" id="overview">
+          <div class="hero-copy">
+            <p class="welcome-line" id="welcome-line">Good afternoon</p>
+            <p class="hero-subtitle">
+              Here&apos;s your Rx snapshot for Apple devices.
+            </p>
+            <h2>
+              Diagnose performance, storage, privacy, and connectivity from one
+              polished software family.
+            </h2>
+            <p class="hero-body">
+              System Rx leads the lineup with real-time hardware diagnostics,
+              while the related Rx apps help users clean storage, inspect
+              network privacy, and troubleshoot weak internet connections.
+            </p>
+            <div class="hero-actions">
+              <a
+                class="button button-primary"
+                href="https://apps.apple.com/us/app/system-rx/id6761538119"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Download System Rx
+              </a>
+              <a class="button button-secondary" href="#family">
+                Explore the Family
+              </a>
+            </div>
+          </div>
+
+          <article class="hero-panel">
+            <div class="section-title">
+              <span>How System Rx Helps</span>
+            </div>
+            <div class="hero-card">
+              <div class="hero-card-head">
+                <img
+                  class="app-icon app-icon-large"
+                  src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/fd/51/d0/fd51d0ac-165b-0a90-1bd0-136fd4fa13a6/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg"
+                  alt="System Rx icon"
+                />
+                <div>
+                  <h3>Medical-grade telemetry</h3>
+                  <p class="pill pill-alert">System Rx flagship</p>
+                </div>
+              </div>
+              <p class="hero-card-body">
+                Live CPU, RAM, thermal, storage, and battery insights with
+                local-first processing and technical accuracy tuned for iPhone
+                and iPad power users.
+              </p>
+            </div>
+
+            <div class="metric-grid">
+              <article class="metric-card">
+                <p class="metric-label">Platforms</p>
+                <p class="metric-value">iPhone<br />iPad</p>
+              </article>
+              <article class="metric-card">
+                <p class="metric-label">Privacy</p>
+                <p class="metric-value">Local-only<br />processing</p>
+              </article>
+              <article class="metric-card">
+                <p class="metric-label">Release</p>
+                <p class="metric-value">April 7<br />2026</p>
+              </article>
+            </div>
+          </article>
+        </section>
+
+        <section class="content-section">
+          <div class="section-title">
+            <span>What We Found</span>
+          </div>
+          <article class="insight-card neutral">
+            <div class="insight-icon">+</div>
+            <p>
+              The Rx lineup already covers the four user concerns people hit
+              most often: device performance, full storage, suspicious
+              background traffic, and unstable internet quality.
+            </p>
+          </article>
+        </section>
+
+        <section class="content-section" id="download">
+          <div class="section-title">
+            <span>What You Can Do</span>
+          </div>
+          <div class="action-list">
+            <article class="action-card">
+              <div class="action-icon amber">S</div>
+              <div>
+                <h3>Run System Rx first</h3>
+                <p>
+                  Check your hardware identity, live processor load, memory,
+                  thermals, storage, and battery status from one technical
+                  dashboard.
+                </p>
+              </div>
+            </article>
+            <article class="action-card">
+              <div class="action-icon mint">R</div>
+              <div>
+                <h3>Move into the right specialist app</h3>
+                <p>
+                  If storage is the issue, use Cleaner Rx. If you suspect
+                  tracking, use Cyber Rx. If the internet feels unstable, use
+                  Connectivty Rx.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section" id="family">
+          <div class="section-title">
+            <span>Related Rx Apps</span>
+          </div>
+          <div class="family-grid" id="family-grid"></div>
+        </section>
+      </main>
+    </div>
+
+    <template id="app-card-template">
+      <article class="family-card">
+        <div class="family-card-top">
+          <img class="app-icon" alt="" />
+          <div class="family-card-head">
+            <p class="card-kicker"></p>
+            <h3></h3>
+          </div>
+        </div>
+        <p class="family-description"></p>
+        <div class="tag-row"></div>
+        <div class="card-footer">
+          <div class="price-note"></div>
+          <a class="button button-primary card-button" target="_blank" rel="noreferrer">
+            View on the App Store
+          </a>
+        </div>
+      </article>
+    </template>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

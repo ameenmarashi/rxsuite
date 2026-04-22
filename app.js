@@ -3,8 +3,31 @@ const slug = params.get("app");
 const baseApp = getRxApp(slug) || RX_APPS[0];
 const platformFamily = getAppleDevicePlatformFamily();
 const app = getRxAppView(baseApp, platformFamily);
+const pageUrl = `${window.location.origin}${window.location.pathname}?app=${baseApp.slug}`;
+const pageDescription = `${app.name} for ${app.platforms}. ${app.shortDescription}`;
 
-document.title = `${app.name} | Rx Family`;
+applySeo({
+  title: `${app.name} | ${app.kicker} for Apple Devices | Rx Suite`,
+  description: pageDescription,
+  image: app.icon,
+  url: pageUrl,
+  jsonLd: {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: app.name,
+    applicationCategory: "UtilitiesApplication",
+    operatingSystem: app.platforms,
+    description: pageDescription,
+    image: app.icon,
+    author: {
+      "@type": "Person",
+      name: "Ameen Marashi, MD",
+    },
+    url: pageUrl,
+    downloadUrl: getPlatformAwareAppUrl(baseApp),
+  },
+});
+
 document.body.dataset.accent = app.accent;
 
 document.getElementById("detail-subtitle").textContent = app.kicker;

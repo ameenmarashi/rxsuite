@@ -72,6 +72,46 @@ const RX_APPS = [
         platforms: "iPhone and iPad",
         minimumOsVersion: "iOS 17.0 or later",
       },
+      mac: {
+        platforms: "Mac",
+        minimumOsVersion: "macOS 15.0 or later",
+        size: "2.2 MB",
+        promoText:
+          "System Rx brings professional-grade hardware diagnostics to Mac with precise real-time system telemetry.",
+        appStoreDescription:
+          "Monitor your Mac's hardware vitals with precise device identification and real-time telemetry for processor load, memory usage, thermal state, storage activity, and battery information where available.",
+        paragraphs: [
+          "On Mac, System Rx is positioned as a focused diagnostics dashboard for users who want clear visibility into hardware identity, processor activity, memory usage, storage behavior, and thermal state.",
+          "The Mac App Store compatibility listing shows support for macOS 15.0 or later, while the app itself keeps the same local-first approach with on-device diagnostics and no telemetry leaving the machine.",
+        ],
+        highlights: [
+          {
+            title: "Precise hardware identity for Mac model and chip details",
+            description:
+              "See the exact Mac model, chip family, and core technical specifications reported for the current machine.",
+          },
+          {
+            title: "Real-time CPU and RAM monitoring",
+            description:
+              "Track processor load and memory footprint live so users can understand how the Mac is behaving under workload.",
+          },
+          {
+            title: "Thermal state visibility for overheating and throttling awareness",
+            description:
+              "Review thermal status information to catch sustained heat and throttling conditions earlier.",
+          },
+          {
+            title: "Storage and battery insights for device health tracking",
+            description:
+              "Inspect storage behavior and battery-related health indicators from one diagnostics view where supported.",
+          },
+          {
+            title: "Privacy-first local processing",
+            description:
+              "System telemetry is processed locally and does not leave the device.",
+          },
+        ],
+      },
     },
   },
   {
@@ -262,6 +302,46 @@ const RX_APPS = [
       ios: {
         platforms: "iPhone and iPad",
         minimumOsVersion: "iOS 26.2 or later",
+      },
+      mac: {
+        platforms: "Mac",
+        minimumOsVersion: "macOS 26.4 or later",
+        size: "3.1 MB",
+        promoText:
+          "Cyber Rx brings privacy-focused background network diagnostics to Mac with local-first analysis and exportable reports.",
+        appStoreDescription:
+          "Cyber Rx reveals which external servers and services apps communicate with on your Mac so you can audit network activity, identify trackers and analytics, and understand your digital footprint from a desktop workflow.",
+        paragraphs: [
+          "On Mac, Cyber Rx focuses on transparent background network diagnostics by showing active connections, grouping them into practical categories, and helping users spot analytics trackers, advertising services, and essential infrastructure.",
+          "The Mac-compatible App Store listing shows support for macOS 26.4 or later and describes a local-first workflow with historical privacy trends, PDF reporting, and no need to route data through an external VPN.",
+        ],
+        highlights: [
+          {
+            title: "Real-time snapshots of active network connections",
+            description:
+              "Capture a live snapshot of background connections and outgoing requests happening behind the scenes on Mac.",
+          },
+          {
+            title: "Categorization into trackers, analytics, and essential traffic",
+            description:
+              "Connections are grouped into practical categories so users can understand who is collecting data and why.",
+          },
+          {
+            title: "Historical privacy trends over time",
+            description:
+              "Keep a record of recurring services and changing network behavior so patterns become easier to spot over time.",
+          },
+          {
+            title: "Professional PDF reports",
+            description:
+              "Export findings into a cleaner PDF format for sharing, review, or long-term documentation.",
+          },
+          {
+            title: "Local-first on-device analysis",
+            description:
+              "Cyber Rx runs entirely on-device without sending traffic through third-party VPN services.",
+          },
+        ],
       },
     },
   },

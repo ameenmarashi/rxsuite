@@ -1,36 +1,3 @@
-const apps = [
-  {
-    name: "Cleaner Rx",
-    url: "https://apps.apple.com/us/app/cleaner-rx/id6760282868",
-    icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d0/31/59/d03159dd-46f0-ba4f-31d3-4f0e8203bdf4/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
-    kicker: "Storage cleanup",
-    description:
-      "Review large photos, videos, screenshots, duplicate groups, and selected files with explicit user-confirmed cleanup flows.",
-    tags: ["iPhone", "iPad", "Mac", "$0.99"],
-    price: "One-time price: $0.99",
-  },
-  {
-    name: "Cyber Rx",
-    url: "https://apps.apple.com/us/app/cyber-rx/id6761430318",
-    icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/95/79/2a/95792a7c-5703-c6e6-f6a1-c1ac6fd76cbc/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
-    kicker: "Privacy diagnostics",
-    description:
-      "Reveal which external servers and services apps contact in the background, grouped into trackers, analytics, and essential traffic.",
-    tags: ["iPhone", "iPad", "Free", "Local-first"],
-    price: "Free with lifetime upgrade option",
-  },
-  {
-    name: "Connectivty Rx",
-    url: "https://apps.apple.com/us/app/connectivty-rx/id6761007058",
-    icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/3f/45/1e/3f451e77-11c0-a024-ff48-a61f24588ac3/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
-    kicker: "Internet diagnostics",
-    description:
-      "Diagnose weak throughput, latency, packet loss, and upstream outages with clear explanations for browsing, calls, streaming, and gaming.",
-    tags: ["iPhone", "iPad", "Free", "PDF reports"],
-    price: "Free with pro diagnostics features",
-  },
-];
-
 const greetingNode = document.getElementById("welcome-line");
 const familyGrid = document.getElementById("family-grid");
 const cardTemplate = document.getElementById("app-card-template");
@@ -47,13 +14,20 @@ function renderGreeting() {
   greetingNode.textContent = `${getGreeting()} 👋`;
 }
 
+function openAppDetail(slug) {
+  window.location.href = `./app.html?app=${slug}`;
+}
+
 function renderApps() {
-  apps.forEach((app) => {
+  RX_APPS.forEach((app) => {
     const fragment = cardTemplate.content.cloneNode(true);
+    const card = fragment.querySelector(".family-card");
     const icon = fragment.querySelector(".app-icon");
     const kicker = fragment.querySelector(".card-kicker");
     const title = fragment.querySelector("h3");
     const description = fragment.querySelector(".family-description");
+    const featureList = fragment.querySelector(".feature-list");
+    const platformLine = fragment.querySelector(".platform-line");
     const tagRow = fragment.querySelector(".tag-row");
     const price = fragment.querySelector(".price-note");
     const button = fragment.querySelector(".card-button");
@@ -62,12 +36,37 @@ function renderApps() {
     icon.alt = `${app.name} icon`;
     kicker.textContent = app.kicker;
     title.textContent = app.name;
-    description.textContent = app.description;
+    description.textContent = app.shortDescription;
+    platformLine.textContent = app.platforms;
     price.textContent = app.price;
-    button.href = app.url;
-    button.textContent = `Download ${app.name}`;
+    button.href = `./app.html?app=${app.slug}`;
+    button.textContent = `Explore ${app.name}`;
 
-    app.tags.forEach((tag) => {
+    card.tabIndex = 0;
+    card.setAttribute("role", "link");
+    card.setAttribute("aria-label", `Open details for ${app.name}`);
+    card.dataset.accent = app.accent;
+
+    card.addEventListener("click", () => openAppDetail(app.slug));
+    card.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openAppDetail(app.slug);
+      }
+    });
+
+    button.addEventListener("click", (event) => {
+      event.stopPropagation();
+    });
+
+    app.cardFeatures.forEach((feature) => {
+      const item = document.createElement("p");
+      item.className = "feature-item";
+      item.textContent = `\u2713 ${feature}`;
+      featureList.appendChild(item);
+    });
+
+    getDisplayTags(app).forEach((tag) => {
       const chip = document.createElement("span");
       chip.className = "tag";
       chip.textContent = tag;

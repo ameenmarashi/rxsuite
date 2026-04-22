@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rx App Details</title>
+    <meta
+      name="description"
+      content="Detailed pages for the Rx software family apps."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="detail-page">
+    <div class="page-shell">
+      <main class="detail-layout">
+        <section class="site-nav detail-nav">
+          <div class="nav-brand">
+            <span class="nav-mark">Rx</span>
+            <div>
+              <p class="eyebrow">Rx Suite</p>
+              <p class="nav-subtitle">Apple diagnostics and utility apps</p>
+            </div>
+          </div>
+          <div class="top-links">
+            <details class="nav-dropdown">
+              <summary>Products</summary>
+              <div class="nav-dropdown-menu">
+                <a href="./app.html?app=system-rx">System Rx</a>
+                <a href="./app.html?app=cleaner-rx">Cleaner Rx</a>
+                <a href="./app.html?app=cyber-rx">Cyber Rx</a>
+                <a href="./app.html?app=connectivty-rx">Connectivty Rx</a>
+              </div>
+            </details>
+            <a href="./about.html">About</a>
+            <a href="./support.html">Support</a>
+            <a href="./privacy.html">Privacy</a>
+          </div>
+        </section>
+
+        <section class="content-section detail-hero-shell">
+          <div class="detail-hero">
+            <div class="detail-hero-copy">
+              <a class="back-link" href="./index.html">Back to Rx family</a>
+              <p class="eyebrow" id="detail-platforms"></p>
+              <h1 id="detail-heading"></h1>
+              <p class="hero-subtitle" id="detail-subtitle">App details</p>
+              <p class="hero-card-body" id="detail-intro"></p>
+              <p class="creator-note">
+                Created and designed by <span class="nowrap">Ameen Marashi, MD.</span>
+              </p>
+              <div class="detail-chip-row" id="detail-chip-row"></div>
+              <div class="hero-actions">
+                <a
+                  class="button button-primary"
+                  id="detail-download"
+                  href="#"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View on the App Store
+                </a>
+                <a class="button button-secondary" href="./privacy.html">Privacy Policy</a>
+              </div>
+            </div>
+
+            <aside class="detail-hero-panel">
+              <div class="detail-app-frame">
+                <img class="detail-app-icon" id="detail-icon" alt="" />
+              </div>
+              <div class="detail-hero-panel-copy">
+                <p class="metric-label">Product focus</p>
+                <p class="detail-panel-title" id="detail-kicker">App details</p>
+                <p class="detail-panel-copy" id="detail-panel-copy"></p>
+              </div>
+            </aside>
+          </div>
+
+          <div class="metric-grid detail-metrics detail-stats-grid">
+            <article class="metric-card">
+              <p class="metric-label">Price</p>
+              <p class="metric-value" id="detail-price"></p>
+            </article>
+            <article class="metric-card">
+              <p class="metric-label">Requirements</p>
+              <p class="metric-value" id="detail-os"></p>
+            </article>
+            <article class="metric-card">
+              <p class="metric-label">Category</p>
+              <p class="metric-value" id="detail-category"></p>
+            </article>
+            <article class="metric-card">
+              <p class="metric-label">App Size</p>
+              <p class="metric-value" id="detail-size"></p>
+            </article>
+            <article class="metric-card">
+              <p class="metric-label">Content Rating</p>
+              <p class="metric-value" id="detail-rating"></p>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <div class="section-title">
+            <span>Promotional Text</span>
+          </div>
+          <div class="detail-copy">
+            <p id="detail-promo"></p>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <div class="section-title">
+            <span>Overview</span>
+          </div>
+          <div class="detail-copy" id="detail-copy"></div>
+        </section>
+
+        <section class="content-section detail-features-shell">
+          <div class="section-title">
+            <span>Key Features</span>
+          </div>
+          <div class="detail-feature-list" id="detail-features"></div>
+        </section>
+
+      </main>
+    </div>
+
+    <script src="./rx-apps.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

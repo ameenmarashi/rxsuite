@@ -118,7 +118,7 @@ const RX_APPS = [
     slug: "cleaner-rx",
     name: "Cleaner Rx",
     url: "https://apps.apple.com/us/app/cleaner-rx/id6760282868",
-    icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d0/31/59/d03159dd-46f0-ba4f-31d3-4f0e8203bdf4/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+    icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f6/46/36/f6463604-39d6-dfa7-e7ab-077d1347e9b6/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
     kicker: "Storage cleanup",
     shortDescription:
       "Review large photos, videos, screenshots, duplicate groups, and selected files with explicit user-confirmed cleanup flows.",
@@ -235,7 +235,7 @@ const RX_APPS = [
     slug: "cyber-rx",
     name: "Cyber Rx",
     url: "https://apps.apple.com/us/app/cyber-rx/id6761430318",
-    icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/95/79/2a/95792a7c-5703-c6e6-f6a1-c1ac6fd76cbc/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/20/c5/62/20c562a5-4a70-13d6-0d3d-5b5da77da0d0/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
     kicker: "Privacy diagnostics",
     shortDescription:
       "Reveal which external servers and services apps contact in the background, grouped into trackers, analytics, and essential traffic.",
